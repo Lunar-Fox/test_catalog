@@ -7,55 +7,35 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Setup
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p>1. Clone this repository</p>
+<p>2. Run "composer update"</p>
+<p>3. Run "cp .env.example .env"</p>
+<p>4. Configure database</p>
+<p>5. Run migrations "php artisan migrate"</p>
+<p>6. Run seed for products and categories "php artisan db:seed --class=ProductAndCategories"</p>
+<p>7. Run seed for message examples "php artisan db:seed --class=Messages"</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Main files
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p>Categories and Products</p>
 
-## Learning Laravel
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/app/Category.php">Category model</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/app/Product.php">Product model</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/migrations/2020_08_25_104908_create_products_table.php">Products migration</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/migrations/2020_08_25_104857_create_categories_table.php">Categories migration</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/migrations/2020_08_25_110426_creates_product_category_pivot_table.php">Products and categories relationship table</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/seeds/ProductAndCategories.php">Products and categories seeder</a></p>
+<br/>
+<p>Books</p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/app/Http/Controllers/BooksController.php">Books controller</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/migrations/2020_08_25_111842_create_books_table.php">Books migration</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/seeds/Books.php">Books seeder</a></p>
+<br/>
+<p>Guestbook</p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/database/migrations/2020_08_25_113806_create_guest_messages_table.php">Guestbook migration</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/app/Http/Controllers/GuestBookController.php">Guestbook controller</a></p>
+<p><a href="https://github.com/Lunar-Fox/test_catalog/blob/master/resources/views/messages.blade.php">Guestbook messages template with pagination</a></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
